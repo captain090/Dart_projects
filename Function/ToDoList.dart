@@ -11,19 +11,19 @@ void main() {
       stdin.readLineSync()!,
     ); //taking input from user what user want to do
     switch (opt) {
-      case 1:
+      case 1://adding task in list
         print("Enter task In ToDoList(only String):");
         String Task = stdin.readLineSync()!;
         ToDolist.add(Task);
         break;
-      case 2:
+      case 2://checking the stored task
         if (ToDolist.isNotEmpty) {
           for (var ToDo in ToDolist) print(ToDo);
         } else {
           print("List is empty.");
         }
         break;
-      case 3:
+      case 3://checking list is empty or not and delete task from list
         if (ToDolist.isNotEmpty) {
           for (int i = 0; i < ToDolist.length; i++) {
             print("$i: ${ToDolist[i]}");
@@ -41,7 +41,7 @@ void main() {
         }
         break;
 
-      case 4:
+      case 4://if user want to exit from program
         print("Good Bye");
         exit(0);
       default:
